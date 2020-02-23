@@ -1,6 +1,7 @@
 package com.telran.scheduler.tests;
 
 import com.telran.scheduler.model.User;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest extends  TestBase{
@@ -13,7 +14,9 @@ public class LoginTest extends  TestBase{
 
 
     app.getSession().tapLoginButton();
-    app.getSession().pause(4000);
+    app.getSession().pause(5000);
+
+    Assert.assertTrue(app.getEvent().isPlusButtonPresent());
 
   }
 

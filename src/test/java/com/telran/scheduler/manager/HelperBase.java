@@ -24,4 +24,8 @@ public class HelperBase {
   public void pause(int millis) throws InterruptedException {
     Thread.sleep(millis);
   }
+
+  public boolean isElementPresent(By locator){
+    return driver.findElements(locator).size()>0;
+  }
 }

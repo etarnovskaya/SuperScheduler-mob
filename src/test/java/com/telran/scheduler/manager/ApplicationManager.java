@@ -9,6 +9,7 @@ import java.net.URL;
 public class ApplicationManager {
   AppiumDriver driver;
   SessionHelper session;
+  EventPage event;
 
   public void init() throws MalformedURLException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -30,6 +31,7 @@ public class ApplicationManager {
 
 
     session = new SessionHelper(driver);
+    event = new EventPage(driver);
   }
 
   public void stop() throws InterruptedException {
@@ -39,5 +41,9 @@ public class ApplicationManager {
 
   public SessionHelper getSession() {
     return session;
+  }
+
+  public EventPage getEvent() {
+    return event;
   }
 }
