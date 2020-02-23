@@ -21,6 +21,7 @@ public class HelperBase {
       driver.findElement(locator).sendKeys(text);
     }
   }
-
-
+  public void pause(int millis) throws InterruptedException {
+    Thread.sleep(millis);
+  }
 }

@@ -5,6 +5,15 @@ public class User {
   private  String password;
 
 
+  public User withUserName(String userName) {
+    this.userName = userName;
+    return  this;
+  }
+
+  public User withPassword(String password) {
+    this.password = password;
+    return  this;
+  }
 
   public String getUserName() {
     return userName;
